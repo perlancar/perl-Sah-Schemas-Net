@@ -1,15 +1,5 @@
-Revision history for Sah-Schemas-Path
+Revision history for Sah-Schemas-Net
 
-0.003   2016-07-22 (PERLANCAR)
+0.001   2016-08-13 (PERLANCAR)
 
-	- Add x.completion attribute.
-
-
-0.002   2016-07-22 (PERLANCAR)
-
-	- [build] Rebuild to generate Sah::SchemaR::* modules.
-
-
-0.001   2016-07-20 (PERLANCAR)
-
-	- First release.
+	- First, early release.

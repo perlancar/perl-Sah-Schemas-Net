@@ -17,3 +17,5 @@ Todo:
  net::ipv6_range
 
  net::hostname
+
+ net::portnum
