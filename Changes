@@ -1,3 +1,9 @@
+0.002   2018-01-14 (PERLANCAR)
+
+        - [build] Rebuild with updated DZP:Sah::Schemas to add prereqs to
+          Perinci::Sub::XCompletion::* modules.
+
+
 0.001   2016-08-13 (PERLANCAR)
 
 	- First, early release.
