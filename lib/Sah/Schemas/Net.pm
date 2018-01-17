@@ -15,7 +15,3 @@ Todo:
  net::ip_range
  net::ipv4_range
  net::ipv6_range
-
- net::hostname
-
- net::portnum
