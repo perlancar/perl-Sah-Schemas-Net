@@ -9,9 +9,9 @@ use warnings;
 
 sub meta {
     +{
-        v => 2,
+        v => 3,
         enable_by_default => 0,
-        might_die => 1,
+        might_fail => 1,
         prio => 50,
     };
 }
@@ -27,10 +27,11 @@ sub coerce {
     $res->{expr_match} = "!ref($dt)";
     $res->{expr_coerce} = join(
         "",
-        "do { my \$ip = NetAddr::IP->new($dt) or die 'Invalid IP address syntax';",
-        " \$ip->bits == 32 or die 'Not an IPv4 address (probably IPv6)';",
-        " \$ip->masklen == 32 or die 'Not a single IPv4 address (an IP range)';",
-        " \$ip }",
+        "do { my \$ip = NetAddr::IP->new($dt); if (!\$ip) { ['Invalid IP address syntax'] } ",
+        "elsif (\$ip->bits != 32) { ['Not an IPv4 address (probably IPv6)'] } ",
+        "elsif (\$ip->masklen != 32) { ['Not a single IPv4 address (an IP range)'] } ",
+        "else { [undef, \$ip] } ",
+        "}",
     );
 
     $res;
