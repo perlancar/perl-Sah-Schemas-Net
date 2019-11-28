@@ -1,6 +1,8 @@
-package Data::Sah::Coerce::perl::obj::str_net_ipv4;
+package Data::Sah::Coerce::perl::To_obj::From_str::net_ipv4;
 
+# AUTHOR
 # DATE
+# DIST
 # VERSION
 
 use 5.010001;
@@ -10,6 +12,7 @@ use warnings;
 sub meta {
     +{
         v => 4,
+        summary => 'Coerce IPv4 address object from string',
         might_fail => 1,
         prio => 50,
     };
@@ -37,8 +40,6 @@ sub coerce {
 }
 
 1;
-# ABSTRACT: Coerce IPv4 address object from string
+# ABSTRACT:
 
 =for Pod::Coverage ^(meta|coerce)$
-
-=head1 DESCRIPTION

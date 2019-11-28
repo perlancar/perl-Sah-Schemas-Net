@@ -7,7 +7,7 @@ our $schema = [obj => {
     summary => 'IPv4 address',
     isa => 'NetAddr::IP',
     'x.perl.coerce_rules' => [
-        'str_net_ipv4',
+        'From_str::net_ipv4',
     ],
 }, {}];
 
