@@ -13,7 +13,7 @@ our $schema = [int => {
 
     examples => [
         {value=>'', valid=>0},
-        {value=>1, valid=>0},
+        {value=>1, valid=>1},
         {value=>80, valid=>1},
         {value=>65535, valid=>1},
         {value=>65536, valid=>0},
